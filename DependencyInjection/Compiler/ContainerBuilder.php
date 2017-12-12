@@ -68,6 +68,8 @@ class ContainerBuilder extends BaseContainerBuilder
         }
 
         $mergedConfig = $this->getParameterBag()->resolveValue($mergedConfig);
+        
+        $mergedConfig['dbal']['driver'] = 'pdo_mysql';
 
         $params = $mergedConfig['dbal'];
 
